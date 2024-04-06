@@ -1,0 +1,110 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+}
+
+.swiggy-logo{
+  width : 100px;
+}
+
+.nav-item > ul{
+  display: flex;
+}
+
+/* .body {
+  margin-left : 10 px;
+  margin-right : 10 px;
+
+} */
+
+.vedio-container {
+
+   display: flex;
+   flex-wrap: wrap;
+   margin: 2px;
+   padding: 2px;
+   margin-left: 100px ;
+  }
+  
+.nav-item > ul > li{
+  color : red;
+  list-style-type: none;
+  padding : 5px;
+  margin : 5px;
+  cursor: pointer;
+}
+
+.search{
+   margin : 5px;
+   padding : 5px;
+}
+
+.vedio-card {
+  height : auto;
+  padding : 5px;
+  width : 200px;
+  margin: 4px ;
+  background-color: #f0f0f0;
+}
+
+.vedio-card:hover{
+  border : 1px solid black;
+  cursor: pointer;
+}
+
+.vedio-card-image{
+    width: 100%;
+}
+
+.filter-btn{
+   margin : 5px ;
+   padding: 2px;
+   padding-left: 6px ;
+   padding-right: 6px ;
+   border-radius : 10px ;
+   cursor: pointer;
+}
+
+.search-btn{
+  margin-top : 15px ;
+}
+
+.filter-search-btn{
+  margin-left : 350px;
+  padding : 8px;
+  /* margin: 5px; */
+}
+
+.input-search{
+  width : 300px;
+}
+
+.error{
+   color: red;
+  
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.formField {
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+/* mongodb+srv://Ujwal:ujwal%40cluster@merncluster.5dodjsu.mongodb.net/ */
