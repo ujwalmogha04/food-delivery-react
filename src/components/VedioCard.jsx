@@ -10,6 +10,7 @@ const VedioCard = ({ resdata }) => {
         <h4>Time :- {resdata.time}</h4>
         <h4>cuisine:-{resdata.cuisine}</h4>
         <h4>priceForTwo :-{resdata.priceForTwo}</h4>
+        <button>go to menu</button>
       </div>
     )
   }
