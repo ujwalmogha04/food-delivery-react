@@ -16,9 +16,6 @@ function App() {
   return (
     <div >
     <BrowserRouter>
-    <h1 className="text-3xl font-bold">
-      Hello world!
-    </h1>
     <Header />
     <Body />
     <Footer />
