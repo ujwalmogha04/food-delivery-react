@@ -7,16 +7,16 @@ const Body = () => {
   const [restro, setrestro] = useState(resList);
   const [filteredrestro, setfilteredrestro] = useState(resList);
   const [searchValue, setsearchValue] = useState("");
+  const [noRestaurantFound, setNoRestaurantFound] = useState(false);
 
-  function debounce(func, timeout) {
+  const debounce = (func, timeout) => {
     let timer;
-    return function (...args) {
+    return (...args) => {
       clearTimeout(timer);
-      timer = setTimeout(() => {
-        func.apply(this, args);
-      }, timeout);
+      timer = setTimeout(() => func(...args), timeout);
     };
-  }
+  };
+
 
   const handleSearchChange = (value) => {
     setsearchValue(value);
@@ -28,12 +28,19 @@ const Body = () => {
       (resData) => resData.resName.toLowerCase().includes(value.toLowerCase())
     );
     setfilteredrestro(filteredRestraunt);
+
+    if (filteredRestraunt.length === 0) {
+      setNoRestaurantFound(true);
+
+    } else {
+      setNoRestaurantFound(false);
+    }
   }, 500);
 
   const isOnline = useOnline();
 
   if (!isOnline) {
-    return <h1>OOPS! please check your internet connection </h1>
+    return <h1 className='text-red-500 text-xl text-center mt-5 pb-44'>OOPS! please check your internet connection </h1>
   }
 
   return (
@@ -63,30 +70,40 @@ const Body = () => {
           );
           setfilteredrestro(NonVeg);
         }}>NonVeg</button>
-       
-          <input
-            className="border border-gray-300 bg-white h-10 px-8 pr-10 rounded-l-xl text-sm focus:outline-none"
-            type="text"
-            placeholder='Search...'
-            value={searchValue}
-            onChange={(e) => handleSearchChange(e.target.value)}
-          />
-          <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-xl mr-4' onClick={() => debouncedSearch(searchValue)}>Search</button>
-      
+
+        <input
+          className="border border-gray-300 bg-white h-10 px-8 pr-10 rounded-l-xl text-sm focus:outline-none"
+          type="text"
+          placeholder='Search...'
+          value={searchValue}
+          onChange={(e) => handleSearchChange(e.target.value)}
+        />
+        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-xl mr-4' onClick={() => debouncedSearch(searchValue)}>Search</button>
+
         <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md' onClick={() => {
           setfilteredrestro(resList);
         }}>Reset Filter</button>
       </div>
-      <div className='flex flex-wrap ml-48 mt-9 mb-2'>
-        {filteredrestro.map((resdata) => (
-          <VedioCard key={resdata.id} resdata={resdata} />
-        ))}
-      </div>
-    </div>
+
+      {
+        noRestaurantFound ? (
+          <p className="text-red-500 text-center mt-5 text-xl pb-44">No restaurants found matching your search criteria.</p>
+
+        ) : (
+          <div className='flex flex-wrap ml-48 mt-9 mb-2'>
+            {filteredrestro.map((resdata) => (
+              <VedioCard key={resdata.id} resdata={resdata} />
+            ))}
+          </div>
+        )
+      }
+
+    </div >
   );
 };
 
 export default Body;
+
 
 
 
