@@ -11,19 +11,20 @@ import SignUpPage from './Entry/Login';
 
 function App() {
 
-  
+
 
   return (
     <div >
-    <BrowserRouter>
-    <Header />
-    <Body />
-    <Footer />
-    <Routes>
-      <Route path="/about" exact  element={<About />} />
-      <Route path="/contact" exact element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+     <BrowserRouter>
+      <Header />
+        <Body />
+        <Routes>
+          <Route path="/about" exact element={<About />} />
+          <Route path="/contact" exact element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      
     </div>
   );
 }
