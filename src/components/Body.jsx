@@ -40,7 +40,7 @@ const Body = () => {
   const isOnline = useOnline();
 
   if (!isOnline) {
-    return <h1 className='text-red-500 text-xl text-center mt-5 pb-44'>OOPS! please check your internet connection </h1>
+    return <h1 className='text-red-500 text-3xl text-center mt-9 pb-44'>OOPS! please check your internet connection </h1>
   }
 
   return (

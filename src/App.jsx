@@ -10,24 +10,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUpPage from './Entry/Login';
 
 function App() {
-
-
-
   return (
-    <div >
-     <BrowserRouter>
-      <Header />
-        <Body />
+    <div>
+      <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/about" exact element={<About />} />
-          <Route path="/contact" exact element={<Contact />} />
+          <Route path = "/" element ={<Body/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
-      
     </div>
   );
 }
+
+
+  
 
 export default App;
 
