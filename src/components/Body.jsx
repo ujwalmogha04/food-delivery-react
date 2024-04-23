@@ -1,4 +1,4 @@
-import VedioCard from './VedioCard';
+import VedioCard from './RestaurantCard';
 import resList from "../utils/mockData";
 import { useState } from 'react';
 import useOnline from '../utils/useOnline';

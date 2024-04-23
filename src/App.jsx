@@ -7,7 +7,10 @@ import Contact from "./routes/Contact";
 import Body from "./components/Body";
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignUpPage from './Entry/Login';
+import MenuPage from './components/MenuPage';
+import ErrorPage from './components/ErrorPage';
+
+
 
 function App() {
   return (
@@ -16,8 +19,11 @@ function App() {
         <Header />
         <Routes>
           <Route path = "/" element ={<Body/>} />
+          <Route path = "/" element ={<Home/>} />
+          <Route path="/menu/:restaurantName" element={<MenuPage/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path = "/*" element = {<ErrorPage/> } />
         </Routes>
         <Footer />
       </BrowserRouter>

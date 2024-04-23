@@ -21,7 +21,7 @@ const Header = () => {
               setIsSunVisible(!isSunVisible)
               setTheme(theme === 'light' ? 'dark' : 'light');
             }}></img></li>
-          {console.log(theme)}
+          <li className="pt-3 m-3"><Link to="/">Home</Link></li>
           <li className="pt-3 m-3"><Link to="/about">About</Link></li>
           <li className="pt-3 m-3"><Link to="/contact">Contact Us</Link></li>
           <li className="pt-3 m-3">Cart</li>

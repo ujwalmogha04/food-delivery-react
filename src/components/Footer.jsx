@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 function Footer() {
   return (
@@ -15,10 +16,10 @@ function Footer() {
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
             <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/terms">Terms of Service</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className="w-full md:w-1/4 mb-4 md:mb-0">
@@ -32,12 +33,12 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-16 pt-9 text-center ">
-          <p className='mt-4'>&copy; {new Date().getFullYear()} Example Company. All rights reserved.</p>
+          <p className='mt-4'>&copy; {new Date().getFullYear()} Ujwal Mogha. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 }
 
-
 export default Footer;
+
