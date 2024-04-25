@@ -1,6 +1,6 @@
 
-const RestaurantMenuData = {
-  "meghna-foods" :   {
+const RestaurantMenuData = [
+    {
       restaurantName: "Meghna Foods",
       items: [
         { id: 101, name: "Burger", price: 5.99 },
@@ -16,7 +16,7 @@ const RestaurantMenuData = {
       ]
     },
 
-    "mapango":{
+    {
       restaurantName: "Mapango",
       items: [
         { id: 111, name: "Burrito", price: 8.99 },
@@ -32,7 +32,7 @@ const RestaurantMenuData = {
       ]
     },
     
-    "romes":{
+    {
       restaurantName : "Romes", 
       items: [
         { id: 921, name: "Item 1", price: 13 },
@@ -48,7 +48,7 @@ const RestaurantMenuData = {
       ],
     },
 
-    "foor-town":{
+   {
       restaurantName: "Food Town",
         items: [
           { id: 121, name: "Burger", price: 10 },
@@ -63,7 +63,7 @@ const RestaurantMenuData = {
           { id: 130, name: "Ice Cream", price: 6 },
         ],
       },
-     "smart-point": {
+    {
         restaurantName: "Smart Point",
         items: [
           { id: 131, name: "Steak", price: 20 },
@@ -78,7 +78,7 @@ const RestaurantMenuData = {
           { id: 140, name: "Cheesecake", price: 7 },
         ],
       },
-      "pandit-juice-corner":{
+     {
         restaurantName: "Pandit Juice Corner",
         items: [
           { id: 141, name: "Item 1", price: 10 },
@@ -94,7 +94,7 @@ const RestaurantMenuData = {
         ]
       },
       
-      "royal-restaurant":{
+     {
         restaurantName: "Royal Restaurant",
         items: [
           { id: 201, name: "Item 1", price: 9 },
@@ -110,7 +110,7 @@ const RestaurantMenuData = {
         ]
       },
       
-      "burger-hub":{
+      {
         restaurantName: "Burger Hub",
         items: [
           { id: 301, name: "Item 1", price: 11 },
@@ -126,7 +126,7 @@ const RestaurantMenuData = {
         ]
       },
       
-      "pal-dhabba":{
+      {
         restaurantName: "Pal Dhabba",
         items: [
           { id: 401, name: "Item 1", price: 8 },
@@ -142,7 +142,7 @@ const RestaurantMenuData = {
         ]
       },
       
-      "fozi-dhabba":{
+     {
         restaurantName: "Fozi Dhabba",
         items: [
           { id: 501, name: "Item 1", price: 7 },
@@ -158,7 +158,7 @@ const RestaurantMenuData = {
         ]
       },
       
-      "gopali":{
+      {
         restaurantName: "Gopali",
         items: [
           { id: 601, name: "Item 1", price: 10 },
@@ -174,7 +174,7 @@ const RestaurantMenuData = {
         ],
       },
 
-      "baba-ka-dhaba":{
+     {
         restaurantName: "Baba Ka Dhaba",
         items: [
           { id: 701, name: "Item 1", price: 9 },
@@ -190,7 +190,7 @@ const RestaurantMenuData = {
         ],
       },
       
-      "kfc":{
+      {
         restaurantName: "KFC",
         items: [
           { id: 801, name: "Item 1", price: 11 },
@@ -206,7 +206,7 @@ const RestaurantMenuData = {
         ],
       },
       
-      "roll-express":{
+      {
         restaurantName: "Roll Express",
         items: [
           { id: 901, name: "Item 1", price: 12 },
@@ -222,7 +222,7 @@ const RestaurantMenuData = {
         ],
       },
      
-     "biryani-blues": {
+      {
         restaurantName: "Biryani Blues",
         items: [
           { id: 911, name: "Item 1", price: 13 },
@@ -238,7 +238,7 @@ const RestaurantMenuData = {
         ],
       },
      
-};
+    ];
 
 export default RestaurantMenuData;
     

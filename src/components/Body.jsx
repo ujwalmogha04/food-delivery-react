@@ -43,6 +43,8 @@ const Body = () => {
     return <h1 className='text-red-500 text-3xl text-center mt-9 pb-44'>OOPS! please check your internet connection </h1>
   }
 
+
+  else 
   return (
     <div >
       <div className='flex mt-5'>

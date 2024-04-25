@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import MenuCard from "./MenuCard";
 import RestaurantMenuData from "../utils/MenuData";
+import  {useParams} from "react-router-dom";
 
 const MenuPage = () => {
     const [menuData] = useState(RestaurantMenuData);
 
+    const params = useParams();
+    console.log(params)
+
     return (
         <div>
-            {Object.values(menuData).map((restaurant) => (
+            {menuData.map((restaurant) => (
                 <div key={restaurant.restaurantName}>
                     <h2>{restaurant.restaurantName}</h2>
                     {restaurant.items.map((item) => (
