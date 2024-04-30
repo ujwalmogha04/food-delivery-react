@@ -9,12 +9,15 @@ import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MenuPage from './components/MenuPage';
 import ErrorPage from './components/ErrorPage';
+import {Provider} from 'react-redux';
+import Store from './store/Store';
 
 
 
 function App() {
   return (
     <div>
+      <Provider store = {Store}>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -27,6 +30,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </Provider>
     </div>
   );
 }

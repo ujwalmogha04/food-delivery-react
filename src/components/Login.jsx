@@ -97,17 +97,17 @@ const SignUpPage = () => {
                 </div>
                 <div className="formField">
                     <label>Phone Number :</label>
-                    <input type="text" name="phoneNumber" value={formData.phoneNumber} placeholder="Enter phoneNumber" onChange={handleChange} />
+                    <input type="text" name="phoneNumber" value={formData.phoneNumber} placeholder="Enter phoneNumber"  autoComplete="tel" onChange={handleChange} />
                     {errors.phoneNumber && <div className="error">{errors.phoneNumber}</div>}
                 </div>
                 <div className="formField">
                     <label>Password :</label>
-                    <input type="password" name="password" value={formData.password} placeholder="Enter password" onChange={handleChange} />
+                    <input type="password" name="password" value={formData.password} placeholder="Enter password" autoComplete="new-password"  onChange={handleChange} />
                     {errors.password && <div className="error">{errors.password}</div>}
                 </div>
                 <div className="formField">
                     <label>Confirm Password:</label>
-                    <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="Enter password" onChange={handleChange} />
+                    <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="Enter password" autoComplete="new-password" onChange={handleChange} />
                     {errors.confirmPassword && <div className="error">{errors.confirmPassword}</div>}
                 </div>
                 <div className="formField">
