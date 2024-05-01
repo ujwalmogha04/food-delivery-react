@@ -6,7 +6,7 @@ const MenuCard = ({ menuItem }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addItems("grapes"));
+    dispatch(addItems(menuItem));
   };
 
   return (

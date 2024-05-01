@@ -9,6 +9,7 @@ const Header = () => {
   const [theme, setTheme] = useState("light");
 
   const cartItems = useSelector(store => store.cart.items);
+ 
   
 
   return (
@@ -26,7 +27,7 @@ const Header = () => {
           <li className="pt-3 m-3"><Link to="/">Home</Link></li>
           <li className="pt-3 m-3"><Link to="/about">About</Link></li>
           <li className="pt-3 m-3"><Link to="/contact">Contact Us</Link></li>
-          <li className="pt-3 m-3">Cart-{cartItems.length} </li>
+          <li className="pt-3 m-3"><Link to = "/cart" >Cart-{cartItems.length}</Link></li>
           <button className="pt-2 mr-16 ml-3" onClick={() => {
             setEntryPoint(entryPoint === "Login" ? "Logout" : "Login")
           }}>{entryPoint}</button>
