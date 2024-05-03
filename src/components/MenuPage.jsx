@@ -11,7 +11,7 @@ const MenuPage = () => {
         
         const timeout = setTimeout(() => {
             setIsLoading(false); 
-        }, 0); 
+        }, 200); 
 
         return () => clearTimeout(timeout); 
     }, []);
