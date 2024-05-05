@@ -27,7 +27,7 @@ function Cart() {
                 <div className="flex justify-end">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md m-4" onClick={() => handleClearCart()}>Clear Cart</button>
                 </div>
-                <div className='mt-6 ml-5 pb-40 flex flex-wrap'>
+                <div className='mt-6 ml-14 pb-40 flex flex-wrap'>
 
                     {cartItems.map((item) => (
                         <CartItem key={item.id} {...item} />

@@ -13,9 +13,9 @@ const CartItem = ({id , name, price }) => {
 
   return (
     <div className='flex-wrap'>
-    <div className="m-3 bg-gray-100 p-5">
+    <div className="m-3 bg-gray-100 p-5 w-64">
       <p className="text-lg font-semibold ">{name}</p>
-      <p className="text-gray-600 ">Price: ${price}</p>
+      <p className="text-gray-600 ">Price:₹{price}</p>
       <button className="bg-red-500 text-white px-3 py-1 mt-2 rounded hover:bg-red-600" onClick={handleRemoveItem} >
         Remove item
       </button>

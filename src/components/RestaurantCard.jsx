@@ -12,7 +12,7 @@ return (
         <h4 className="text-gray-600">Rating : {resdata.rating}</h4>
         <h4 className="text-gray-600">Time :- {resdata.time}</h4>
         <h4 className="text-gray-600">cuisine:-{resdata.cuisine}</h4>
-        <h4 className="text-gray-600">priceForTwo :-{resdata.priceForTwo}</h4>
+        <h4 className="text-gray-600">priceForTwo :-₹{resdata.priceForTwo}</h4>
         <Link to="/menu/:restaurantName">
           <button className="bg-blue-500 text-white py-2 px-4 rounded mt-4">go to menu</button>
         </Link>
