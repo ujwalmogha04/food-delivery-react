@@ -120,6 +120,7 @@ const SignUpPage = () => {
                             id="email"
                             type="text"
                             name="email"
+                            autoComplete="username"
                             value={formData.email}
                             placeholder="Enter Email"
                             onChange={handleChange}

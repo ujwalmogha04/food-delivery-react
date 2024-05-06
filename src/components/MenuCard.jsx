@@ -1,12 +1,12 @@
 import React from "react";
-import { addItems } from "../store/CartSlice";
+import { addItem } from "../store/CartSlice";
 import { useDispatch } from "react-redux";
 
 const MenuCard = ({ menuItem }) => {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addItems(menuItem));
+    dispatch(addItem(menuItem));
   };
 
   return (
